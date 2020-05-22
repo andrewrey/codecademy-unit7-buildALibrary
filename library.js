@@ -20,6 +20,11 @@ class Media{
         return this._isCheckedOut;
     }
 
+    set isCheckedOut(bool){
+        this._isCheckedOut = bool;
+    }
+
+
     get ratings(){
         return this._ratings;
     }
@@ -67,6 +72,19 @@ class Book extends Media{
 }
 
 
+const historyOfEverything = new Book('Bill Bryson', 'A Short History of Nearly Everything', 544);
+console.log(historyOfEverything);
+historyOfEverything.toggleCheckOutStatus();
+console.log(historyOfEverything);
+historyOfEverything.addRating(3);
+historyOfEverything.addRating(5);
+historyOfEverything.addRating(1);
+console.log(historyOfEverything);
+console.log(historyOfEverything.getAverageRating());
+
+
+
+
 class Movie extends Media{
     constructor(director, title, runTime){
         super(title);
@@ -80,6 +98,17 @@ class Movie extends Media{
         return this._runTime;
     }
 }
+
+const speed = new Movie('Jan de Bont', 'Speed', 116);
+console.log(speed);
+speed.toggleCheckOutStatus();
+console.log(speed);
+speed.addRating(1);
+speed.addRating(1);
+speed.addRating(5);
+console.log(speed);
+console.log(speed.getAverageRating());
+
 
 
 class CD extends Media{
