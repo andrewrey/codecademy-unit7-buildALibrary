@@ -55,6 +55,14 @@ class Book extends Media{
         this._pages = pages;
     }
 
+    get author(){
+        return this._author;
+    }
+
+    get pages(){
+        return this._pages
+    }
+
 
 }
 
@@ -65,6 +73,12 @@ class Movie extends Media{
         this._director = director;
         this._runTime = runTime;
     }
+    get director(){
+        return this._director;
+    }
+    get runTime(){
+        return this._runTime;
+    }
 }
 
 
@@ -73,5 +87,11 @@ class CD extends Media{
         super(title);
         this._artist = artist;
         this._songs = songs;
+    }
+    get artist(){
+        return this._artist;
+    }
+    get songs(){
+        return this._songs;
     }
 }
