@@ -1,7 +1,11 @@
-// Codecademy Lesson Project demonstrating knowledge of using Classes and inheritance
+/* =========================================================================== */
+//   Codecademy Lesson Project demonstrating knowledge of using Classes with   //
+//    getters, setters and methods as well as using inheritance                //
+/* =========================================================================== */
 
 
 
+// Parent Class (superclass)
 class Media{
     constructor(title){
         this._title = title;
@@ -41,3 +45,33 @@ class Media{
 
 }
 
+// Child Classes (subclasses)
+
+
+class Book extends Media{
+    constructor(author, title, pages){
+        super(title);
+        this._author = author;
+        this._pages = pages;
+    }
+
+
+}
+
+
+class Movie extends Media{
+    constructor(director, title, runTime){
+        super(title);
+        this._director = director;
+        this._runTime = runTime;
+    }
+}
+
+
+class CD extends Media{
+    constructor(artist, title, songs){
+        super(title);
+        this._artist = artist;
+        this._songs = songs;
+    }
+}
